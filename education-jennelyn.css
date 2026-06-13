@@ -1,0 +1,195 @@
+:root {
+    --primary:  #6A5ACD;      /* Dark sky blue (replaces maroon) */
+    --light-pink:  #F3E8FF;   /* ✅ Soft sky blue background */
+    --accent: #4A90E2;       /* Bright sky blue accent */
+    --border: #B3D9FF;       /* Light sky blue border */
+    --white: #FFFFFF;
+    --text-dark: #1A3C69;     /* Dark blue text (easy to read) */
+    --shadow: rgba(30, 111, 191, 0.1); /* Blue shadow */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+body {
+    background-color: #F0F8FF; /* ✅ Very light sky blue page background */
+    color: var(--text-dark);
+    line-height: 1.7;
+    padding: 30px 20px;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: var(--light-pink);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+
+.section-box {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.section-box:hover {
+    transform: translateY(-3px);
+}
+
+h3 {
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--light-pink);
+}
+
+h3:first-child {
+    margin-top: 0;
+}
+
+ul {
+    margin: 10px 0 15px 25px;
+}
+
+ul li {
+    padding: 4px 0;
+    font-size: 16px;
+    color: var(--text-dark);
+}
+
+ul[type="square"] li::marker {
+    color: var(--accent);
+    font-size: 14px;
+}
+
+.contact-text {
+    font-size: 16px;
+    padding: 6px 12px;
+    background-color: var(--light-pink);
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.contact-link {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent);
+}
+
+.contact-link:hover {
+    color: var(--primary);
+    border-bottom-style: solid;
+}
+
+.fb-frame {
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.contact-form {
+    margin-top: 15px;
+}
+
+.contact-form label {
+    display: block;
+    color: var(--primary);
+    font-weight: 500;
+    margin: 12px 0 5px;
+    font-size: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: #F0F8FF;
+    color: var(--text-dark);
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    background-color: var(--white);
+}
+
+/* ✨ STYLED SEND BUTTON ✨ */
+.send-btn {
+    margin-top: 18px;
+    padding: 12px 30px;
+    /* ✅ Blue gradient instead of pink */
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    color: var(--white) !important;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(30, 111, 191, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.send-btn:hover {
+    /* ✅ Darker blue gradient on hover */
+    background: linear-gradient(135deg, #155799 0%, #1E6FBF 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(30, 111, 191, 0.4);
+}
+
+.send-btn:active {
+    transform: translateY(0);
+}
+
+
+.back-btn {
+    display: inline-block;
+    background: #1E6FBF; /* ✅ Blue instead of pink */
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #155799; /* ✅ Darker blue hover */
+    transform: translateY(-2px);
+}

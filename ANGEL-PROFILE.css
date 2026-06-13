@@ -1,0 +1,243 @@
+:root {
+    --main-color: #1E6FBF;      /* DARK BLUE (replaces maroon/pink) */
+    --light-pink: #E0F2FF;      /* ✅ LIGHT BLUE BACKGROUND (what you wanted) */
+    --border: #BFD7F2;          /* Soft light blue divider line */
+    --white: #FFFFFF;
+}
+
+/* ---------- GLOBAL RESET & BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ALL TEXT / NUMBERS / SYMBOLS = DARK PINK / MAROON */
+* {
+    color: var(--main-color) !important;
+}
+
+/* REMOVE ALL UNDERLINES EVERYWHERE */
+a, a:link, a:visited, a:hover, a:focus, a:active {
+    text-decoration: none !important;
+    background: transparent !important;
+}
+
+body {
+    background-color: var(--white);
+}
+
+
+/* ---------- TOP HEADER BAR ---------- */
+.profile-top-bar {
+    background-color: var(--light-pink);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.back-arrow {
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.profile-name-top {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+
+/* ---------- PROFILE HEADER SECTION ---------- */
+.profile-container {
+    padding: 0 20px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #ddd;
+    flex-shrink: 0;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-info {
+    padding-top: 6px;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.stats {
+    font-size: 14px;
+    opacity: 0.9;
+    line-height: 1;
+}
+
+
+/* ---------- EDIT PROFILE BUTTON ---------- */
+.edit-btn {
+    background-color: var(--main-color);
+    color: var(--white) !important; /* White text only here */
+    border: none;
+    padding: 6px 20px;
+    border-radius: 3px;
+    font-size: 14px;
+    margin: 8px 0 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+/* ---------- EDIT PROFILE BAR (FIXED ALIGNMENT) ---------- */
+.edit-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    background-color: var(--light-pink);
+    font-size: 15px;
+    border-bottom: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+    margin: 0 -20px 20px; /* Full width inside container */
+    width: calc(100% + 40px);
+}
+
+.edit-icon-left, .edit-icon-right {
+    font-size: 15px;
+    line-height: 1;
+}
+
+
+/* ---------- CREDENTIALS SECTION (PERFECT ALIGNMENT) ---------- */
+.credentials-section {
+    margin-bottom: 20px;
+}
+
+.cred-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.cred-header h3 {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.edit-pen {
+    font-size: 15px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* DIVIDER LINES */
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 4px 0;
+}
+
+/* Credential items (About Me, Education, etc.) */
+.cred-item, .small-btn {
+    display: block;
+    font-size: 15px;
+    padding: 10px 0;
+    cursor: pointer;
+    line-height: 1.2;
+}
+
+.cred-item:last-child {
+    border-bottom: none;
+}
+
+
+/* ---------- TABS NAVIGATION (PERFECT ALIGNMENT) ---------- */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    margin: 15px 0;
+    gap: 5px;
+}
+
+.tab {
+    padding: 10px 6px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    flex: 1;
+    line-height: 1.2;
+}
+
+.tab.active {
+    background-color: var(--light-pink);
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+}
+.search-bar {
+    margin: 10px 0;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 8px 8px 8px 30px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background-color: var(--white);
+    font-size: 13px;
+}
+
+.search-bar::before {
+    content: "🔍";
+    position: absolute;
+    left: 8px;
+    top: 7px;
+    font-size: 14px;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 15px 0 5px 0;
+}
+
+/* ✅ LOG OUT BUTTON — STILL VISIBLE, SAME STYLE, BLUE THEME */
+.logout-btn {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: var(--main-color) !important;
+    font-weight: bold;
+    text-decoration: none !important;
+    margin-top: 10px;
+}

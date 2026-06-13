@@ -1,0 +1,150 @@
+/* ---------- COLORS ---------- */
+:root {
+    --main-color: #A83C6D;      /* Dark pink / Maroon */
+    --light-pink: #FFEFF7;      /* Light pink background */
+    --border: #E8C8D8;          /* Soft pink border */
+    --white: #FFFFFF;
+    --text-dark: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-dark);
+    line-height: 1.6;
+    /* ✅ Flexible padding: smaller on phone, bigger on desktop */
+    padding: clamp(12px, 3vw, 20px);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ---------- HEADER STYLES ---------- */
+h2 {
+    color: var(--main-color);
+    /* ✅ Flexible font size */
+    font-size: clamp(18px, 4vw, 22px);
+    font-weight: bold;
+    text-align: center;
+    /* ✅ Flexible margin */
+    margin: clamp(15px, 3vw, 20px) 0 clamp(8px, 2vw, 10px);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h3 {
+    color: var(--main-color);
+    /* ✅ Flexible font size */
+    font-size: clamp(16px, 3.5vw, 20px);
+    font-weight: bold;
+    /* ✅ Flexible margin */
+    margin: clamp(20px, 4vw, 25px) 0 clamp(8px, 2vw, 10px);
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--light-pink);
+}
+
+.welcome-text {
+    /* ✅ Flexible font size & margin */
+    font-size: clamp(14px, 3vw, 16px);
+    color: var(--text-dark);
+    margin: clamp(8px, 2vw, 10px) 0 clamp(15px, 3vw, 20px);
+    text-align: justify;
+}
+
+.name-header {
+    background-color: var(--light-pink);
+    color: var(--main-color);
+    /* ✅ Flexible padding & font size */
+    padding: clamp(10px, 2.5vw, 12px);
+    border-radius: 6px;
+    text-align: center;
+    font-size: clamp(16px, 3.5vw, 18px);
+    font-weight: bold;
+    /* ✅ Flexible margin */
+    margin: clamp(12px, 3vw, 15px) 0;
+    border: 1px solid var(--border);
+}
+
+/* ---------- PROFILE IMAGE ---------- */
+.profile-img {
+    text-align: center;
+    /* ✅ Flexible margin */
+    margin: clamp(10px, 3vw, 10px) 0;
+}
+
+.profile-img img {
+    /* ✅ Flexible size: full width on phone, fixed max on desktop */
+    width: 100%;
+    max-width: 100px;
+    height: 100px;
+    border-radius: 4%;
+    object-fit: cover;
+    border: 3px solid var(--light-pink);
+    box-shadow: 0 2px 8px rgba(168, 60, 109, 0.2);
+}
+
+/* ---------- LISTS ---------- */
+ul {
+    /* ✅ Flexible margin & indent */
+    margin: clamp(8px, 2vw, 10px) 0 clamp(20px, 5vw, 30px);
+    color: var(--text-dark);
+}
+
+ul li {
+    padding: 4px 0;
+    /* ✅ Flexible font size */
+    font-size: clamp(14px, 3vw, 16px);
+    position: relative;
+}
+
+/* Custom square bullets (pink) */
+ul[type="square"] li::marker {
+    color: var(--main-color);
+}
+
+/* ---------- CAREER GOALS SECTION ---------- */
+.career-goals {
+    background-color: var(--light-pink);
+    /* ✅ Flexible padding */
+    padding: clamp(12px, 2.5vw, 15px);
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    /* ✅ Flexible margin */
+    margin-top: clamp(8px, 2vw, 10px);
+    /* ✅ Flexible font size */
+    font-size: clamp(14px, 3vw, 16px);
+}
+
+/* ---------- BACK BUTTON ---------- */
+.back-btn {
+    display: inline-block;
+    /* ✅ Flexible margin & padding */
+    margin: clamp(20px, 4vw, 30px) 0 clamp(8px, 2vw, 10px);
+    padding: clamp(8px, 2vw, 8px) clamp(16px, 3vw, 20px);
+    background-color: var(--main-color);
+    color: var(--white) !important;
+    text-decoration: none;
+    border-radius: 4px;
+    /* ✅ Flexible font size */
+    font-size: clamp(14px, 3vw, 15px);
+}
+
+.back-btn:hover {
+    opacity: 0.9;
+}
+
+/* ✅ Extra small screen optimization */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    ul {
+        margin-left: 20px;
+    }
+}

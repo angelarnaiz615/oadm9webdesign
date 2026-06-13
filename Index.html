@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcomePage" class="auth-container">
+        <div class="logo-icon">📚</div>
+        <h1>Quora</h1>
+        <p class="tagline">A place to share knowledge and better understand the world</p>
+
+        <hr class="divider">
+
+        <p class="terms">By continuing you indicate that you agree to Quora's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+        
+        <div class="button-group">
+            <button class="button google" onclick="loginWithGoogle()">
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" class="icon">
+                Continue with Google
+            </button>
+            <button class="button facebook" onclick="loginWithFacebook()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" class="icon">
+                Continue with Facebook
+            </button>
+        </div>
+
+        <div class="btn-secondary-group">
+            <button class="btn-secondary" onclick="showForm('loginForm')">Login</button>
+            <button class="btn-secondary" onclick="showForm('signupForm')">Sign up with email</button>
+        </div>
+
+        <hr class="divider">
+
+        <div class="footer-links">
+            <a href="#">About</a> . <a href="#">Careers</a> . <a href="#">Languages</a> . © Quora, Inc. 2026
+        </div>
+    </div>
+
+    <div id="loginForm" class="form-container hidden">
+        <div class="form-header">
+            <button class="close-btn" onclick="hideForm()">&times;</button>
+        </div>
+        <div class="form-logo">Q</div>
+        <h2 class="form-title">Login to Quora</h2>
+        
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" id="username" placeholder="Enter your username" required>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <button class="form-btn" onclick="login()">Log in</button>
+    </div>
+
+    <div id="signupForm" class="form-container hidden">
+        <div class="form-header">
+            <button class="close-btn" onclick="hideForm()">&times;</button>
+        </div>
+        <h2 class="form-title">Sign up</h2>
+        
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="signupName" placeholder="Your Full Name" required>
+        </div>
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="signupEmail" placeholder="yournewemail@domain.com" required>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="signupPass" placeholder="yournewpassword" required>
+        </div>
+        <button class="form-btn" onclick="signUp()">Next</button>
+    </div>
+
+    <script>
+        function login() {
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+
+            if(username === "gelly@gmail.com" && password === "24689") {
+                window.location.href = "ANGEL.ARNAIZ.html";
+            } 
+            else if(username === "jen@gmail.com" && password === "12345") {
+                window.location.href = "JENNELYN-PROFILE.html";
+            }
+            else if(username === "jeannie@gmail.com" && password === "010806") {
+                window.location.href = "JEANNIE-PROFILE.html";
+            }
+            else{
+                alert("Invalid username or password");
+            }
+        }
+
+        function showForm(formId) {
+            document.getElementById('welcomePage').classList.add('hidden');
+            document.getElementById(formId).classList.remove('hidden');
+        }
+        function hideForm() {
+            document.getElementById('welcomePage').classList.remove('hidden');
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('signupForm').classList.add('hidden');
+        }
+        function loginWithGoogle() { alert("Google login works!"); }
+        function loginWithFacebook() { alert("Facebook login works!"); }
+        function signUp() { alert("Account created! Click Login."); hideForm(); }
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* ---------- COLORS ---------- */
+:root {
+    --main-color: #A83C6D;      /* Dark pink / Maroon */
+    --light-pink: #FFEFF7;      /* Light pink background */
+    --border: #E8C8D8;          /* Soft pink border */
+    --white: #FFFFFF;
+    --text-dark: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: clamp(12px, 3vw, 20px);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ---------- HEADER STYLES ---------- */
+h2 {
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: var(--light-pink);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+h3 {
+    color: var(--main-color);
+    font-size: clamp(16px, 3.5vw, 20px);
+    font-weight: bold;
+    margin: clamp(20px, 4vw, 25px) 0 clamp(8px, 2vw, 10px);
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--light-pink);
+}
+
+.welcome-text {
+    font-size: clamp(14px, 3vw, 16px);
+    color: var(--text-dark);
+    margin: clamp(8px, 2vw, 10px) 0 clamp(15px, 3vw, 20px);
+    text-align: justify;
+}
+
+.name-header {
+    background-color: var(--light-pink);
+    color: var(--main-color);
+    padding: clamp(10px, 2.5vw, 12px);
+    border-radius: 6px;
+    text-align: center;
+    font-size: clamp(16px, 3.5vw, 18px);
+    font-weight: bold;
+    margin: clamp(12px, 3vw, 15px) 0;
+    border: 1px solid var(--border);
+}
+
+/* ---------- PROFILE IMAGE ---------- */
+.profile-img {
+    text-align: center;
+    margin: clamp(12px, 3vw, 15px) 0;
+}
+
+.profile-img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto; /* Fixed height issue - now responsive */
+    aspect-ratio: 4/5;
+    border-radius: 8%;
+    object-fit: cover;
+    border: 3px solid var(--light-pink);
+    box-shadow: 0 2px 8px rgba(168, 60, 109, 0.2);
+}
+
+/* ---------- LISTS ---------- */
+ul {
+    margin: clamp(8px, 2vw, 10px) 0 clamp(20px, 5vw, 30px);
+    padding-left: 25px; /* Added proper indent */
+    color: var(--text-dark);
+}
+
+ul li {
+    padding: 4px 0;
+    font-size: clamp(14px, 3vw, 16px);
+}
+
+ul[type="square"] li::marker {
+    color: var(--main-color);
+}
+
+/* ---------- INTRO & CAREER GOALS ---------- */
+.short-intro,
+.career-goals {
+    background-color: var(--light-pink);
+    padding: clamp(12px, 2.5vw, 15px);
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    margin-top: clamp(8px, 2vw, 10px);
+    font-size: clamp(14px, 3vw, 16px);
+}
+
+/* ---------- BACK BUTTON ---------- */
+.back-btn {
+    display: inline-block;
+    margin: clamp(20px, 4vw, 30px) 0 clamp(8px, 2vw, 10px);
+    padding: clamp(8px, 2vw, 8px) clamp(16px, 3vw, 20px);
+    background-color: var(--main-color);
+    color: var(--white) !important;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: clamp(14px, 3vw, 15px);
+    transition: opacity 0.2s ease;
+}
+
+.back-btn:hover {
+    opacity: 0.9;
+}
+
+/* ✅ Small screen optimization */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    ul {
+        padding-left: 20px;
+    }
+}
